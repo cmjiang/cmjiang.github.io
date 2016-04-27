@@ -1,0 +1,51 @@
+<html>
+<TITLE>ECS231 Homework 2</TITLE>
+<body BGCOLOR = "FFFFFF">
+
+<hr>
+<h3>
+ECS 231 Assignment 2, Part II <br>
+Block Matrix-Matrix Multiplication
+</h3>
+
+<ul> 
+<li> Platform 
+<blockquote>
+<li> Intel Core i7-3612QM CPU @ 2.10 GHz
+<li> Memory: 2GB
+<li> Cache: L1d 32KB, L1i 32KB, L2 256KB, L3 6MB
+</blockquote> 
+</ul>
+
+<ul>
+<li> Libraries
+<blockquote>
+<li> <a href="http://www.netlib.org/blas/">BLAS</a>
+</blockquote>
+</ul>
+
+<ul>
+<li> Approaches
+<blockquote>
+<li> Basic matrix multiplication
+     <a href="basic_dgemm.c">basic_dgemm.c</a>
+<li> Blocked matrix multiplication
+     <a href="blocked_dgemm.c">blocked_dgemm.c</a>
+<li> BLAS routine -- DGEMM.F
+     <a href="blas_dgemm.c">blas_dgemm.c</a>
+</blockquote>
+</ul>
+
+<ul>
+<li> Plots
+<blockquote>
+<li> Basic vs Blocked (blocksize = 32)
+<div class="figure">
+  <p align="center"><img src="basic_block.png" width="480" height="361">
+</div>
+<li> Basic and Blocked vs BLAS DGEMM
+<div class="figure">
+  <p align="center"><img src="basic_block_blas.png" width="480" height="361">
+</div>
+</blockquote>
+</ul>
