@@ -1,0 +1,65 @@
+<html>
+<TITLE>ECS231 Homework 3</TITLE>
+<body BGCOLOR = "FFFFFF">
+
+<hr>
+<h3>
+ECS 231 Assignment 3 <br>
+Iterative Subspace Projection Methods for Solving Large Scale Linear Systems
+</h3>
+
+<ul>
+<li> Methods
+<blockquote>
+<li> Steepest Descent (SD)
+     <a href="mysd.m">mysd.m</a>
+<li> Conjugate Gradient (CG)
+     <a href="mycg.m">mycg.m</a>
+<li> Minimal Residual (MR)
+     <a href="mymr.m">mymr.m</a>
+<li> Restarted GMRES (with Arnoldi Method)
+     <a href="mygmres.m">mygmres.m</a>
+     <a href="myarnoldi.m">myarnoldi.m</a>
+</blockquote>
+</ul>
+
+<ul>
+<li> Example of Running the methods on
+<blockquote>
+<li> Symmetric positive definite matrices
+     <a href="main_spd.m">main_spd.m</a>
+<li> Non-singular matrices
+     <a href="main_ns.m">main_ns.m</a>
+     <a href="main_ns2.m">main_ns2.m</a>
+<li> You may also need this function to readin matrices
+     <a href="mmread.m">mmread.m</a>
+</ul>
+
+<ul>
+<li> Plots
+<blockquote>
+<li> SD and CG on bcsstk15
+<div class="figure">
+  <p align="center"><img src="bcsstk15.png" width="480" height="361">
+</div>
+<li> SD and CG on NOS3
+<div class="figure">
+  <p align="center"><img src="NOS3.png" width="480" height="361">
+</div>
+<li> MR and GMRES on WEST0479
+<div class="figure">
+  <p align="center"><img src="west0479.png" width="480" height="361">
+</div>
+<li> MR and GMRES on MAHINDAS
+<div class="figure">
+  <p align="center"><img src="mahindas.png" width="480" height="361">
+</div>
+<li> Addtionally, MR and GMRES on bcsstk15
+<div class="figure">
+  <p align="center"><img src="bcsstk15_2.png" width="480" height="361">
+</div>
+<li> Additonally, MR and GMRES on NOS3
+<div class="figure">
+  <p align="center"><img src="NOS3_2.png" width="480" height="361">
+</div>
+</ul>
