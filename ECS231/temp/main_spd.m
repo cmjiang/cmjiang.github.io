@@ -8,21 +8,33 @@ x_sol = ones(rows,1);
 b = A * x_sol;
 maxit = 1e5;
 tol = 1e-4;
-x0 = rand(rows,1);
+dopcgp = 1; % set to 0 for bcsstk15 and 1 for NOS3
 
-%% Call mysd, mycg and Matlab function pcg
-[x_sd, flag_sd, err_sd, iter_sd] = mysd(A,b,tol,maxit,x0);
-[x_cg, flag_cd, err_cg, iter_cg] = mycg(A,b,tol,maxit,x0);
-[x_pcg, flag_pcg, res_pcg, iter_pcg, err_pcg] = pcg(A,b,tol,maxit);
+%% Call mysd, mycg and Matlab function pcg without/with a precondioner
+[x1,fl1,rr1,it1,rv1] = mysd(A,b,tol,maxit);
+[x2,fl2,rr2,it2,rv2] = mycg(A,b,tol,maxit);
+[x3,fl3,rr3,it3,rv3] = pcg(A,b,tol,maxit);
+if (dopcgp)
+    L = ichol(A);
+    [x4,fl4,rr4,it4,rv4] = pcg(A,b,tol,maxit,L,L');
+end
 
 %% Plot data
 figure(1);
-loglog(1:iter_sd,err_sd(1:iter_sd),'b-');
+loglog(0:it1,rv1/norm(b),'b-','LineWidth',2);
 hold on;
-loglog(1:iter_cg,err_cg(1:iter_cg),'r-');
-loglog(1:iter_pcg,err_pcg(1:iter_pcg)/norm(b),'g-');
+loglog(0:it2,rv2/norm(b),'r-','LineWidth',2);
+loglog(0:it3,rv3/norm(b),'g:','LineWidth',2);
+if (dopcgp)
+    loglog(0:it4,rv4/norm(b),'k-','LineWidth',2);
+end
 hold off;
 ylabel('relative residual');
 xlabel('number of iterations');
-title('SD, CG and PCG on NOS3');
-legend('mysd','mycg','pcg');
+if (~dopcgp)
+    title('SD, CG, PCG (no precond.) on bcsstk15');
+    legend('mysd','mycg','pcg (no precond.)');
+else
+    title('SD, CG, PCG (no precond.) and PCG (with precond.) on NOS3');
+    legend('mysd','mycg','pcg (no precond.)','pcg (with precond.)');
+end
