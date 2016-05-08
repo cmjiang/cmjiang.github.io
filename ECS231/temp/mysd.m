@@ -18,12 +18,12 @@ function [x,flag,relres,iter,resvec] = mysd(A,b,tol,maxit)
 
 n = size(A,1);
 x = zeros(n,1);
-resvec = zeros(maxit+1,1);
+resvec = zeros(maxit,1);
 iter = 1;
 r = b - A*x;
 resvec(iter) = norm(r);
 relres = resvec(iter) / norm(b); % relative residual 
-while (relres > tol && iter <= maxit+1)
+while (relres > tol && iter <= maxit)
     alpha = r'*r / (r'*A*r);
     x = x + alpha*r;
     r = b - A*x;
@@ -31,7 +31,7 @@ while (relres > tol && iter <= maxit+1)
     resvec(iter) = norm(r);
     relres = resvec(iter)/ norm(b); % relative residual
 end
-if (iter < maxit+1)
+if (iter <= maxit)
     flag = 0; % converge to tol
 else
     flag = 1; % not converge but stop at maxit
