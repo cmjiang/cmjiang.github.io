@@ -7,7 +7,7 @@ clear all;close all;
 x_sol = ones(rows,1);
 b = A * x_sol;
 maxit = 1e1;
-tol = 1e-8; 
+tol = 1e-8;
 m=60;
 
 %% Call mymr, mygmres(m=60) and Matlab function gmres with incomplete LU
@@ -18,13 +18,14 @@ m=60;
 
 %% Plot
 figure(1);
-semilogy(0:it1,rv1/norm(b),'b-','LineWidth',2);
+semilogy(0:it1,rv1/norm(b),'b-o','LineWidth',2);
 hold on;
-semilogy(0:it2,rv2/norm(b),'r-','LineWidth',2);
-semilogy(0:it3(2),rv3/norm(b),'g-','LineWidth',2);
+semilogy(0:it2,rv2/norm(b),'r-o','LineWidth',2);
+semilogy(0:it3(2),rv3/rv3(1),'g-o','LineWidth',2);
 hold off;
 ylabel('relative residual');
 xlabel('number of iterations');
+ylim([1e-14 1e1]);
 %title('MR, GMRES and GMRES (incomplete LU) on west0479');
 title('MR, GMRES and GMRES (incomplete LU) on mahindas');
 legend('mymr','mygmres (m=60)', 'gmres (incomplete LU)');
