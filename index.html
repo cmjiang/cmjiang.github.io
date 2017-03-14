@@ -1,141 +1,95 @@
-<!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <title>Chengming Jiang</title>
-  <link href="./templates/css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="./templates/normalize.css">
-  <link rel="stylesheet" href="./templates/skeleton.css">
-  <link rel="stylesheet" href="./templates/cmj.css">
-  <style>
-  #profile { border : 0 solid black; border-radius : 10px; }
-  </style>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="templates/jemdoc.css" type="text/css" />
+<link rel="icon" href="templates/icon.jpg" />
+<title>Chengming Jiang</title>
+<!-- MathJax -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
 </head>
 <body>
-  <div class="container">
-    <div class="row">
-      <div class="column" style="margin-top: 10%">
-        <table>
-        <tr>
-        <td width="25%">
-        <div class="two" id = 'ccc_image'><img src='./profile.jpg' width=150px 
-          id = 'profile'></div>
-        </td>
-        <td width="75%">
-        <h1 style="margin-bottom:0">Chengming Jiang</h1>
-        <h5>Ph.D. Candidate<br>
-          CS, UC DAVIS<br>
-          Email: cmjiang AT ucdavis.edu
-        </h5>
-        </td>
-        </tr>
-        </table>
-
-        
-        <p>
-          I am a Ph.D. candidate, major in Computer Science at 
-          <a href="https://www.ucdavis.edu/">University of 
-          California Davis</a>,
-          and advised by
-          <a href="http://web.cs.ucdavis.edu/~bai/">Professor Zhaojun Bai</a>.
-          My research interests are in numerial algorithms and high performance
-          computing. 
-          Previously, I got my M.S. and B.S. degree in Information Security at
-          <a href="http://www.sjtu.edu.cn/">Shanghai Jiao Tong University</a>.
-        </p>
-        
-
-        <hr>
-          <h5> Recent Publications and Projects at UC Davis </h5>
-
-          <ol>
-
-          <p>
-          <li>
-          <b>Robust and efficient computation of eigenvectors in a 
-            generalized spectral method for constrained clustering</b>.
-          <ul>
-          <li> Authors: Chengming Jiang, Huiqing Xie and Zhaojun Bai.
-          <li> <i>Algorithm</i>: a generalization of Courant-Fischer
-                  variational principle and a spectral 
-                  regularization/enhancement scheme for a symmetric 
-                  semi-definite matrix pencil. 
-          <li> <i>Software</i>: a MATLAB implementation for constrained
-                  image segmentation.
-                  <a href="https://github.com/aistats2017239/fastge2">
-                  [Github]</a>
-          <li> <i>Paper</i>: accepted at the 20th International Conference 
-                  on Artificial Intelligence and Statistics 
-                  (AISTATS 2017), 2017.
-                  <a href="publications/aistats2017.pdf">[Paper]</a>
-          </ul>
-
-          <p>
-          <li>
-          <b>A fast selected inversion algorithm for Green's function 
-          calculation in many-body quantum Monte Carlo simulations</b>.
-          <ul>
-          <li> <i>Authors</i>: Chengming Jiang, Zhaojun Bai and 
-               Richard Scalettar.
-          <li> <i>Algorithm</i>: a fast algorithm for computing the inverse
-               of structured matrices.
-          <li> <i>Software</i>: an OpenMP/MPI hybrid implementation embedded
-               into QUantum Electron Simulation Toolbox
-               (<a href="https://code.google.com/p/quest-qmc">QUEST</a>).
-               <a href="">[Github]</a>
-          <li> <i>Paper</i>: In Proceeding of the 30th IEEE International 
-               Parallel and Distributed Processing Symposium (IPDPS 2016), 
-               pp. 473-482, 2016.
-               <a href="publications/ipdps2016.pdf">[Paper]</a>
-               <a href="talks/ipdps2016_talk.pdf">[Talk]</a>
-          <li> <i>Posters</i>: (1) SIAM Conference on Applied Linear Algebra
-               2015; (2) Bay Area Scientific Computing Day (BASCD) 2015.
-               <a href="posters/siam2015.pdf">[Poster]</a>
-          </ul>
-          <p>
-          <li> <b> Fix-Heiberger Reduction Algorithm for Solving the
-               Ill-conditioned Generalized Symmetric Eigenvalue Problem </b>
-          <ul> 
-          <li> <i>Authors</i>: Chengming Jiang and Zhaojun Bai.
-          <li> <i>Algorithm</i>: a Fix-Heiberger reduction algorithm for
-               solving generalized symmetric eigenvalue problem in the form
-               of Ax=&#955Bx where A and B are real symmetric matrices and
-               B is positive semi-definite w.r.t. a threshold &#949.
-          </ul>
-          </ol>
-
-          <hr>
-          <h5> Previous Publications at SJTU</h5>
-          <ol> 
-
-          <p>
-          <li>
-          Tanfeng Sun, Xinghao Jiang, Chengming Jiang, and          
-          Yaqing Li.
-          <b>A video content classification algorithm applying to human
-          action recognition</b>.
-          Elektronika ir Elektrotechnika 19(4):61-64, 2013.
-          <a href="publications/ee2013.pdf">[Preprint]</a>
-
-          <p>
-          <li>
-          Xinghao Jiang, Tanfeng Sun, Bing Feng, and Chengming Jiang.
-          <b>A space-time Surf descriptor and its application to
-          action recognition with video words</b>.
-          In <i>Proceeding of the 8th IEEE International Conference on
-          Fuzzy Systems and Knowledge Discovery (FSKD 2011)</i>, vol.3,
-          pp. 1911-1915, 2011.
-          <a href="publications/fskd2011.pdf">[Preprint]</a>
-          </ol>
-
-        <hr>
-          <h5> Teaching Assistance </h5>
-          <blockquote>
-          <li>
-          <a href="http://cmjiang.cs.ucdavis.edu/ECS231">
-            ECS231 Large Scale Scientific Computing (Spring 2016 UC Davis)</a>
-          </blockquote> 
-      </div>
-    </div>
-  </div>
+<div id="layout-content">
+<div id="toptitle">
+<h1>Chengming Jiang</h1>
+</div>
+<table class="imgtable"><tr><td>
+<img src="templates/profile.jpg" alt="photos" width="230px" />&nbsp;</td>
+<td align="left"><p><a href="http://cmjiang.cs.ucdavis.edu/" target=&ldquo;blank&rdquo;>Chengming Jiang</a>, Ph.D. Candidate</p>
+<p><a href="http://www.cs.ucdavis.edu/" target=&ldquo;blank&rdquo;>Computer Science</a>, 
+<a href="https://www.ucdavis.edu/" target=&ldquo;blank&rdquo;>University of California Davis</a>.</p>
+<p><table border="0" table style="width:100%">
+<tr>
+<td>Office</td>
+<td> 2356 Academic Surge </td>
+</tr>
+<tr>
+<td> Email </td>
+<td> cmjiang at ucdavis.edu </td>
+</tr>
+<tr>
+<td> Homepage</td>
+<td> 
+<a href="http://cmjiang.cs.ucdavis.edu"> http://cmjiang.cs.ucdavis.edu </a> 
+</td>
+</tr>
+</table> </p>
+</td></tr></table>
+<h2>About</h2>
+<p> I am a Ph.D. candidate, major in Computer Science at <a href="https://www.ucdavis.edu/" target=&ldquo;blank&rdquo;>University of California Davis</a>.
+I am advised by <a href="http://web.cs.ucdavis.edu/~bai/" target=&ldquo;blank&rdquo;>Professor Zhaojun Bai</a>.
+My research interests are in numerial algorithms and high performance computing. 
+I got my M.S. and B.S. degree in Information Security at <a href="http://www.sjtu.edu.cn/" target=&ldquo;blank&rdquo;>Shanghai Jiao Tong University</a>.
+</p>
+<h2>Recent Projects</h2>
+<ul>
+<li><p><b>FASTGE2</b>:
+Theoretical and computational solutions to eigenproblems of positive semi-definite pencils arising from data clustering.
+<a href="FASTGE2.html" target=&ldquo;blank&rdquo;>Show details</a>.</p></li>
+</ul>
+<ul>
+<li><p><b>FSI</b>:
+A fast selected inversion algorithm for computing selected entries of p-cyclic matrices. 
+<a href="FSI.html" target=&ldquo;blank&rdquo;>Show details</a>.</p></li>
+</ul>
+<ul>
+<li><p><b>ICGSEP</b>: 
+A reduction algorithm for solving ill-conditioned generalized symmetric eigenvalue problems.
+<a href="ICGSEP.html" target=&ldquo;blank&rdquo;>Show details</a>.</p></li>
+</ul>
+<h2>Publications</h2>
+<ul>
+<li><p><b>Robust and efficient computation of eigenvectors in a generalized spectral method for constrained clustering</b><br />
+Chengming Jiang, Huiqing Xie and Zhaojun Bai<br />
+accepted at <i>the 20th International Conference on Artificial Intelligence and Statistics (AISTATS 2017)</i>, 2017.
+(<a href="publications/aistats2017.pdf" target=&ldquo;blank&rdquo;>preprint</a>)</p></li>
+</ul>
+<ul>
+<li><p><b>A fast selected inversion algorithm for Green's function calculation in many-body quantum Monte Carlo simulations</b><br />
+Chengming Jiang, Zhaojun Bai and Richard Scalettar<br />
+In <i>Proceeding of the 30th IEEE International Parallel and Distributed Processing Symposium (IPDPS 2016)</i>, pp. 473&ndash;482, 2016.
+(<a href="publications/ipdps2016.pdf" target=&ldquo;blank&rdquo;>preprint</a>)</p></li>
+</ul>
+<ul>
+<li><p><b>A video content classification algorithm applying to human action recognition</b><br />
+Tanfeng Sun, Xinghao Jiang, Chengming Jiang and Yaqing Li<br />
+<i>Elektronika ir Elektrotechnika</i> 19(4):61&ndash;64, 2013.
+(<a href="publications/ee2013.pdf" target=&ldquo;blank&rdquo;>preprint</a>)</p></li>
+</ul>
+<ul>
+<li><p><b>A space-time Surf descriptor and its application to action recognition with video words</b><br />
+Xinghao Jiang, Tanfeng Sun, Bing Feng and Chengming Jiang.<br />
+In <i>Proceeding of the 8th IEEE International Conference on Fuzzy Systems and Knowledge Discovery (FSKD 2011)</i>, vol.3, pp. 1911&ndash;1915, 2011.
+(<a href="publications/fskd2011.pdf">preprint</a>)</p></li>
+</ul>
 </body>
 </html>
