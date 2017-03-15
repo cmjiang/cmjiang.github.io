@@ -36,19 +36,27 @@ MathJax.Hub.Config({
 </p>
 </li>
 <li>
-<p>Theoretically the Courant-Fischer variational principle is generalized to the singular pencil \(L_G - \lambda L_H\), so as to prove that the infimum of the Rayleigh quotient \eqref{eq:rq} is obtainable.
+<p>Theoretically the Courant-Fischer variational principle is generalized to the singular pencil \(L_G - \lambda L_H\), which proves that the infimum of the Rayleigh quotient \eqref{eq:rq} is obtainable. Problem \eqref{eq:rq} is subsequently converted into:</p>
+<p style="text-align:center">
+\begin{equation}\label{eq:eigLGLH}
+L_Gx=\lambda L_H x.
+\end{equation}
 </p>
 </li>
 <li>
-<p>Computationally, a spectral regularization is used to transform the singular pencil \(L_G - \lambda L_H\) to a positive definite pencil \(K - \sigma M\) where \(K\) and \(M\) are symmetric and M is positive definite. Specifically,</p>
+<p>Computationally, a spectral regularization is used to transform the singular pencil \(L_G - \lambda L_H\) into a positive definite pencil \(K - \sigma M\) where \(K\) and \(M\) are symmetric and \(M\) is positive definite. Specifically,</p>
 <p style="text-align:center">
-\begin{equation} \label{eq:GHnew}
+\begin{equation}\label{eq:GHnew}
 K=-L_H
 \quad \mbox{and} \quad
 M= L_G +\mu L_H + ZSZ^T,
 \end{equation}
 </p>
-<p>where \(Z \in \mathbb{R}^{n \times s}\) is an orthonormal basis of the common nullspace of \(L_G\) and \(L_H\). \(S\in \mathbb{R}^{s\times s}\) is an arbitrary positive definite matrix, and \(\mu\) is a positive scalar.
+<p>where \(Z \in \mathbb{R}^{n \times s}\) is an orthonormal basis of the common nullspace of \(L_G\) and \(L_H\). \(S\in \mathbb{R}^{s\times s}\) is an arbitrary positive definite matrix, and \(\mu\) is a positive scalar. Problem \eqref{eq:eigLGLH} is finally converted into the generalized symmetric definite eigenproblem:</p>
+<p style="text-align:center">
+\begin{equation}\label{eq:eigKM}
+K x = \sigma M x.
+\end{equation}
 </p>
 </li>
 </ul>
