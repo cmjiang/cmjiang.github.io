@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="templates/jemdoc.css" type="text/css" />
+<link rel="icon" href="templates/icon.jpg" />
+<title>FASTGE2</title>
+<!-- MathJax -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+	  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<!-- End MathJax -->
+</head>
+<body>
+<div id="layout-content">
+<div id="toptitle">
+<h1>FAST-GE-2.0</h1>
+<div id="subtitle"> A solver for eigenproblems of positive semi-definite pencils.</div>
+</div>
+<h2>Description</h2>
+<ul>
+<li>
+<p>FAST-GE-2.0 provides theoretical and computational solutions to the optimizationg problem:</p>
+<p style="text-align:center">
+\begin{equation}\label{eq:rq}
+\inf_{\substack{x\in \mathbb{R}^{n}\\ x^T L_H x > 0}} \frac{x^T L_G x}{x^T L_H x},
+\end{equation}
+</p>
+<p>where \(L_G\) and \(L_H\) are symmetric positive semi-definite and the pencil \(L_G - \lambda L_H\) is singular, i.e., \(\det(L_G - \lambda L_H)\equiv 0\) for all \(\lambda\).
+</p>
+</li>
+<li>
+<p>Theoretically the Courant-Fischer variational principle is generalized to the singular pencil \(L_G - \lambda L_H\), so as to prove that the infimum of the Rayleigh quotient \eqref{eq:rq} is obtainable.
+</p>
+</li>
+<li>
+<p>Computationally, a spectral regularization is used to transform the singular pencil \(L_G - \lambda L_H\) to a positive definite pencil \(K - \sigma M\) where \(K\) and \(M\) are symmetric and M is positive definite. Specifically,</p>
+<p style="text-align:center">
+\begin{equation} \label{eq:GHnew}
+K=-L_H
+\quad \mbox{and} \quad
+M= L_G +\mu L_H + ZSZ^T,
+\end{equation}
+</p>
+<p>where \(Z \in \mathbb{R}^{n \times s}\) is an orthonormal basis of the common nullspace of \(L_G\) and \(L_H\). \(S\in \mathbb{R}^{s\times s}\) is an arbitrary positive definite matrix, and \(\mu\) is a positive scalar.
+</p>
+</li>
+</ul>
+<h2>Package</h2>
+<ul>
+<li><p><a href="https://github.com/aistats2017239/fastge2" target=&ldquo;blank&rdquo;>Matlab codes and data on Github.</a></p>
+</li>
+</ul>
+<h2>Examples</h2>
+<ul>
+<li>Application on constrained image segmentation. Details in Reference [1].
+<p style="text-align:center;">
+<img src="fastge2/ImgSeg.png" alt="Constrained Image Segmentation">
+</p>
+<p><center> 
+Fig: (a) Original Images, 
+(b) Constraints, 
+(c) Indicator Vector, <br />
+(d) Renormalized Indicator Vector,
+(e) Constrained Segmentation by FAST-GE-2.0.</center>  </p>
+</li>
+</ul>
+<h2>References</h2>
+<ol>
+<li><p><b>Robust and efficient computation of eigenvectors in a generalized spectral method for constrained clustering</b><br />
+Chengming Jiang, Huiqing Xie and Zhaojun Bai<br />
+accepted at <i>the 20th International Conference on Artificial Intelligence and Statistics (AISTATS 2017)</i>, 2017.
+(<a href="publications/aistats2017.pdf" target=&ldquo;blank&rdquo;>preprint</a>)</p></li>
+</ol>
+<h2>Contact</h2>
+<ul>
+<li> Email: cmjiang at ucdavis.edu</li>
+<li> Homepage: <a href="http://cmjiang.cs.ucdavis.edu"> http://cmjiang.cs.ucdavis.edu </a>
+</li>
+</ul>
+<hr>
+</div>
+</body>
+</html>
