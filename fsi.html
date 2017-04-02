@@ -26,7 +26,7 @@ MathJax.Hub.Config({
 <h2>Description</h2>
 <ul>
 <li>
-<p>Given a block <i>p-cyclic</i> matrix</p>
+<p>Consider a normalized block <i>p-cyclic</i> matrix</p>
 <p style="text-align:center">
 \begin{equation} \label{eq:M}
 M = \begin{bmatrix}
@@ -37,17 +37,16 @@ M = \begin{bmatrix}
 \end{bmatrix}, 
 \end{equation}
 </p>
-<p>and two integers \(c\) (\(L\%c = 0\)) and \(q\in[0,c-1]\), FSI computes \(L/c\) selected block columns
+<p>
+FSI computes a selected inversion of \(G = M^{-1}\).
+</p>
+</li>
+<li>
+<p>The selected inversion is a collection of selected blocks of \(G\). For example, given two integers \(c\) (\(L\%c = 0\)) and \(q\in[0,c-1]\), FSI computes \(L/c\) selected block columns
 <p style="text-align:center">
 \begin{equation}\label{eq:S}
 \mathcal{S} = \{G_{k\ell}\, |\, 1 \leq k \leq L \,\, \mbox{and} 
 \,\, \ell \in \mathcal{I}\}
-\end{equation}
-</p>
-<p>of</p>
-<p style="text-align:center">
-\begin{equation}\label{eq:G}
-G = M^{-1},
 \end{equation}
 </p>
 <p>where \(\mathcal{I} = \{ c-q,\, 2c-q,\, \ldots,\, (L/c)c-q\}\).
@@ -70,19 +69,14 @@ Fig.1: Graphical illustration of the three stages of the FSI algorithm.
 <center></p>
 </li>
 </ul>
-<h2>Presentations</h2>
-<ul>
-<li>Talk at <a href="http://www.ipdps.org/ipdps2016/index.html">International Parallel and Distributed Processing Symposium (IPDPS) 2016</a>. (<a href="fsi/ipdps2016talk.pdf">Show slides</a>)</li>
-<li>Poster at (1) <a href="https://www.siam.org/meetings/la15/">SIAM Conference on Applied Linear Algebra 2015</a> and (2) <a href="https://sites.google.com/a/lbl.gov/bascd-2015/">Bay Area Scientific Computing Day (BASCD) 2015</a>. (<a href="fsi/siam2015.pdf">Show poster</a>)</li>
-</ul>
 <h2>Package</h2>
 <ul>
-<li><p><a href="">Fortran standalone package.</a></p>
+<li><p><a href="fsi/FSI.zip"><tt>FSI.zip</tt></a>: a Fortran 90 standalone MPI/OpenMP hybrid parallel implementation of FSI algorithm.</p>
 </li>
 </ul>
 <h2>Examples</h2>
 <ul>
-<li><p>Parallel application on computing Green's functions in many-body Quantum Monte Carlo Simulations. Details in Reference [1].<p>
+<li><p>Parallel application on computing Green's functions in many-body Quantum Monte Carlo Simulations. Details in Ref.[1, 2, 3].<p>
 <table class="imgtable"><tr>
 <td><img src="fsi/omp.png" alt="omp.png" width="300px"/></td>
 <td><img src="fsi/hybrid.png" alt="hybrid.png" width="300"/></td>
@@ -95,10 +89,12 @@ Fig.2 : Left: FSI Performance with OpenMP; Middle: FSI Performance with OpenMP/M
 </ul>
 <h2>References</h2>
 <ol>
-<li><p><b>A fast selected inversion algorithm for Green's function calculation in many-body quantum Monte Carlo simulations</b>.<br />
-Chengming Jiang, Zhaojun Bai and Richard Scalettar.<br />
-In <i>Proceeding of the 30th IEEE International Parallel and Distributed Processing Symposium (IPDPS 2016)</i>, pp. 473&ndash;482, 2016.
+<li><p><b>A fast selected inversion algorithm for Green's function calculation in many-body quantum Monte Carlo simulations</b>.
+Chengming Jiang, Zhaojun Bai and Richard Scalettar.
+In <i>Proceedings of the 30th IEEE International Parallel and Distributed Processing Symposium (IPDPS 2016)</i>, pp. 473&ndash;482, 2016.
 (<a href="publications/ipdps2016.pdf">preprint</a>)</p></li>
+<li>Talk at <a href="http://www.ipdps.org/ipdps2016/index.html">International Parallel and Distributed Processing Symposium (IPDPS) 2016</a>. (<a href="fsi/ipdps2016talk.pdf">Show slides</a>)</li>
+<li>Poster at (1) <a href="https://www.siam.org/meetings/la15/">SIAM Conference on Applied Linear Algebra 2015</a> and (2) <a href="https://sites.google.com/a/lbl.gov/bascd-2015/">Bay Area Scientific Computing Day (BASCD) 2015</a>. (<a href="fsi/siam2015.pdf">Show poster</a>)</li>
 </ol>
 <h2>Contact</h2>
 <ul>

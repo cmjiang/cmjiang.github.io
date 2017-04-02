@@ -21,12 +21,15 @@ MathJax.Hub.Config({
 <div id="layout-content">
 <div id="toptitle">
 <h1>FAST-GE-2.0</h1>
-<div id="subtitle"> A solver for eigenproblems of positive semi-definite pencils.</div>
+<div id="subtitle"> A robust and efficient generalized spectral method for constrained clustering.</div>
 </div>
 <h2>Description</h2>
 <ul>
 <li>
-<p>FAST-GE-2.0 provides theoretical and computational solutions to the optimizationg problem:</p>
+<p>FAST-GE-2.0 (see Ref.[1]) is a spectral method for constrained clustering. Following the idea of FAST-GE (see Ref.[2]), FAST-GE-2.0 incorporates the Must-Link and Cannot-Link constraints into two Laplacian \(L_G\) and \(L_H\) and solves a Rayleigh quotient optimization problem. Based on FAST-GE, FAST-GE-2.0 provides theoretical and computational solutions, i.e., robust and efficient computation of eigenspace.</p>
+</li>
+<li>
+<p>We consider the optimization problem:</p>
 <p style="text-align:center">
 \begin{equation}\label{eq:rq}
 \inf_{\substack{x\in \mathbb{R}^{n}\\ x^T L_H x > 0}} \frac{x^T L_G x}{x^T L_H x},
@@ -67,7 +70,7 @@ K x = \sigma M x.
 </ul>
 <h2>Examples</h2>
 <ul>
-<li>Application on constrained image segmentation. Details in Reference [1].
+<li>Application on constrained image segmentation.
 <p style="text-align:center;">
 <img src="fastge2/ImgSeg.png" alt="Constrained Image Segmentation">
 </p>
@@ -81,10 +84,14 @@ Fig: (a) Original Images,
 </ul>
 <h2>References</h2>
 <ol>
-<li><p><b>Robust and efficient computation of eigenvectors in a generalized spectral method for constrained clustering</b>.<br />
-Chengming Jiang, Huiqing Xie and Zhaojun Bai.<br />
+<li><p><b>Robust and efficient computation of eigenvectors in a generalized spectral method for constrained clustering</b>.
+Chengming Jiang, Huiqing Xie and Zhaojun Bai.
 Accepted at <i>the 20th International Conference on Artificial Intelligence and Statistics (AISTATS 2017)</i>, 2017.
 (<a href="publications/aistats2017.pdf">preprint</a>)</p></li>
+<li><p><b>Simple and scalable constrained clustering: A generalized
+spectral method</b>.
+Mihai Cucuringu, Ioannis Koutis, Sanjay Chawla, Gary Miller and Richard Peng.
+In <i>Proceedings of the 19th International Conference on Artificial Intelligence and Statistics (AISTATS 2016)</i>, pp. 445&ndash;454, 2016.</p></li>
 </ol>
 <h2>Contact</h2>
 <ul>
