@@ -47,13 +47,13 @@ Ax = \lambda Bx
 </ol>
 </li>
 </ul>
-<h2>Package</h2>
+<h2>Software</h2>
 <ul>
 <li>
-<p>A MATLAB function <a href="fh_temp/dsygvic.m"><tt>dsygvic.m</tt></a> with test matrices and files <a href="fh_temp/dsygvic_test.zip"><tt>dsygvic_test.zip</tt></a>.</p>
+<p>A MATLAB function <a href="xsygvic/dsygvic.m"><tt>dsygvic.m</tt></a> with test matrices and files <a href="xsygvic/dsygvic_test.zip"><tt>dsygvic_test.zip</tt></a>.</p>
 </li>
 <li>
-<p>A Fortran package <a href="fh_temp/GSEPIC.tar.gz"><tt>GSEPIC.tar.gz</tt></a> with a <a href="fh_temp/README"><tt>README</tt></a> file. For more details, please see Reference [1].</p>
+<p><a href="https://github.com/cmjiang/xSYGVIC">Fortran implementation of xSYGVIC on GitHub</a></p>
 </li>
 </ul>
 <h2>Presentations</h2>
@@ -90,7 +90,7 @@ H=\left[\begin{array}{c c c c c c c c}
 \(S=\mbox{diag}[1,1,1,1,\delta,\delta,\delta,\delta]\) and \(Q\) is a random orthogonal matrix. As \(\delta \rightarrow 0\), \(\lambda=3,4\) are the only stable eigenvalues of \(A-\lambda B\).</p>
 <p>The computed eigenvalues by (1) MATLAB function <tt>eig</tt>, (2) LAPACK routine <tt>DSYGV</tt> and (3) new LAPACK-style routine <tt>DSYGVIC</tt> (when \(\delta = 10^{-15}\)):</p>
 <p style="text-align:center;">
-<img src="fh_temp/lambda.png" alt="lambda.png" width="800px">
+<img src="xsygvic/lambda.png" alt="lambda.png" width="800px">
 </p>
 </li>
 </ul>
@@ -101,7 +101,7 @@ H=\left[\begin{array}{c c c c c c c c}
 for solving the ill-conditioned generalized symmetric eigenvalue problem</b>.
 (<a href="publications/FHtemp.pdf">preprint</a>)</p></li>
 <li>
-<p>Presentation slides.<a href="fh_temp/icgsep_talk.pdf">(slides)</a></p></p>
+<p>Presentation slides.<a href="xsygvic/icgsep_talk.pdf">(slides)</a></p></p>
 </li>
 </ol>
 <h2>Contact</h2>
